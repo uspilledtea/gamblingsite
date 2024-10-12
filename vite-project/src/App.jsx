@@ -1,11 +1,14 @@
 import './App.css'
-import Button from '@mui/material/Button';
+import './ColorButton.jsx'
+import ColorButton from './ColorButton.jsx'
+
 
 function App() {
   
   return (
     <><div>
       <p>Test</p>
+      <ColorButton text="3"></ColorButton>
       </div>
     </>
   )
