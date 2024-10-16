@@ -1,34 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { ButtonGroup } from '@mui/material'
 import './App.css'
+import './components/ColorButton.jsx'
+import ColorButton from './components/ColorButton.jsx'
+import Button from '@mui/material/Button'
+import AppBar from '@mui/material/AppBar'
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, qui in, aut consectetur, at illo excepturi debitis ut ipsum veritatis asperiores amet? Harum ipsam perspiciatis aliquid repudiandae quos. Perspiciatis, modi.</p>
+    <AppBar position="static">
+      <Toolbar>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2 }}
+          >
+          <MenuIcon />
+        </IconButton>
+        <h1>Gambling Website!!!</h1>
+      </Toolbar>
+    </AppBar>
+    <div className="wrap">
+    <div className="container">
+      <ButtonGroup orientation="vertical">
+      <Button variant="outlined">Home</Button>
+      <Button variant="outlined">Games</Button>
+      </ButtonGroup>
+    </div>
+    </div>
     </>
   )
 }
